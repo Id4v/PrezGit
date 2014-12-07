@@ -73,6 +73,9 @@
                 <img height="600" src="images/centralized_VCS.png" alt="Avant" />
             </section>
             <section>
+                <img src="images/svn.jpg" alt=""/>
+            </section>
+            <section>
                 <h1>Maintenant</h1>
                 <h2>VOUS êtes le dépôt!</h2>
             </section>
@@ -82,8 +85,53 @@
         </section>
         <!-- Comment ça marche ? -->
         <section>
-            <h1>Okay ... mais en vrai ça marche comment ?</h1>
-            <img height="400" src="images/how.jpg" alt=""/>
+            <section>
+                <h1>Okay ... mais en vrai ça marche comment ?</h1>
+                <img height="400" src="images/how.jpg" alt=""/>
+            </section>
+            <section>
+                <h2>Un système d'instantané (snapshot)</h2>
+                <img src="images/snapshots.png" alt=""/>
+                <i>Un snapshot est créé à chaque <blockquote  > git commit </blockquote></i>
+            </section>
+            <section>
+                <h2>Les différents états d'un fichier</h2>
+                <p>Un fichier est forcément dans un de ces états</p>
+                <ul>
+                    <li class="fragment">
+                        <h3>Modifié</h3>
+                        <ul>
+                            <li class="fragment">
+                                <p>Le fichier a changé depuis le dernier snapshot</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        <h3>Indexé</h3>
+                        <ul>
+                            <li class="fragment">
+                                <p>La modification est confirmée et sera intégrée dans le prochain snapshot</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        <h3>Validé</h3>
+                        <ul>
+                            <li class="fragment">
+                                <p>Le fichier a été intégré dans le snapshot</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>3 états = 3 Zones</h2>
+                <img src="images/git-areas.png" alt=""/>
+            </section>
+            <section>
+                <h2>Enchainement</h2>
+                <img src="images/enchainements.png" alt=""/>
+            </section>
         </section>
     </div>
 
