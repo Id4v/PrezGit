@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+    <title>GIT - </title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -50,16 +50,17 @@
                 #présentation courte pourquoi ce cours
             </aside>
         </section>
-        <!-- Git C'est quoi -->
         <section>
-            <h1>Git c'est quoi ?</h1>
-            <img src="images/dafuq.jpg" alt="C'est quoi?" height="500px"/>
-            <aside class="notes">
-                #Dans un premier temps définition de git
-            </aside>
-        </section>
-        <!-- Présentation GIT -->
-        <section>
+            <!-- Git C'est quoi -->
+            <section>
+                <h1>Git c'est quoi ?</h1>
+                <img src="images/dafuq.jpg" alt="C'est quoi?" height="500px"/>
+                <aside class="notes">
+                    #Dans un premier temps définition de git
+                </aside>
+            </section>
+            <!-- Présentation GIT -->
+
             <section>
                 <h2>Gestionnaire de version</h2>
                 <img src="images/branching-illustration@2x.png" alt="Version"/>
@@ -90,7 +91,7 @@
                 <img height="400" src="images/how.jpg" alt=""/>
             </section>
             <section>
-                <h2>Un système d'instantané (snapshot)</h2>
+                <h2>Un système d'instantanés (snapshots)</h2>
                 <img src="images/snapshots.png" alt=""/>
                 <i>Un snapshot est créé à chaque <blockquote  > git commit </blockquote></i>
             </section>
@@ -125,12 +126,64 @@
                 </ul>
             </section>
             <section>
-                <h2>3 états = 3 Zones</h2>
+                <h2>3 <span class="fragment">états</span> = 3 <span class="fragment">Zones</span></h2>
                 <img src="images/git-areas.png" alt=""/>
             </section>
             <section>
                 <h2>Enchainement</h2>
                 <img src="images/enchainements.png" alt=""/>
+                <p>
+                    <code>
+                        git add .
+                    </code>
+                </p>
+                <p>
+                    <code>
+                        git commit -m "Message"
+                    </code>
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Travail en équipe</h1>
+                <img src="images/equipe.jpg" alt=""/>
+            </section>
+            <section>
+                <h2>Les Remotes</h2>
+                <p>Une remote est un dépôt distant accessible par tous les membres de l'équipe.</p>
+                <img src="images/distributed_VCS.png" height="500" alt=""/>
+            </section>
+            <section>
+                <h2>Les Remotes</h2>
+                <br/>
+                <p>Ajouter une remote à son dépôt : <br/>
+                    <code>git remote add &lt;nom remote&gt; &lt;url remote&gt;</code>
+                    <br/>
+                    <i>L'url peut être au format http(s) ou SSH</i>
+                </p>
+            </section>
+            <section>
+                <h2>Les Remotes</h2>
+                <br/>
+                <p>
+                    Publier ses modifications :
+                    <br/>
+                    <code style="font-size: 0.8em;">
+                        git push &lt;nom remote&gt; &lt;branche locale&gt;:&lt;branche distante&gt;
+                    </code>
+                </p>
+            </section>
+            <section>
+                <h2>Les Remotes</h2>
+                <br/>
+                <p>
+                    Récupérer les modifications de ses collègues adorés:
+                    <br/>
+                    <code style="font-size: 0.8em;">
+                        git pull [&lt;nom remote&gt;] [&lt;branche distante&gt;]
+                    </code>
+                </p>
             </section>
         </section>
     </div>
