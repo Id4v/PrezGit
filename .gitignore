@@ -1,6 +1,3 @@
-.DS_Store
-.svn
-log/*.log
+.idea/*
 tmp/**
 node_modules/
-.sass-cache
