@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>GIT - </title>
+    <title>GIT - BTTF</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -43,9 +43,9 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <!-- TITLE -->
-        <section>
+        <section data-background="images/bttf.jpg" >
             <h1>Git pour les nuls</h1>
-            <h3>Pourquoi Git c'est bien et ça peut vous sauver.</h3>
+            <h2 style="text-shadow:5px 2px #223 ">Retour vers le futur pour ton code</h2>
             <aside class="notes">
                 #présentation courte pourquoi ce cours
             </aside>
@@ -96,6 +96,10 @@
                 <i>Un snapshot est créé à chaque <blockquote  > git commit </blockquote></i>
             </section>
             <section>
+                <h2>Le pointeur HEAD</h2>
+                <img src="images/head.png" alt=""/>
+            </section>
+            <section>
                 <h2>Les différents états d'un fichier</h2>
                 <p>Un fichier est forcément dans un de ces états</p>
                 <ul>
@@ -143,6 +147,10 @@
                     </code>
                 </p>
             </section>
+            <section>
+                <h2>RTFM</h2>
+                <a href="http://git-scm.com/book/fr/v2/">L'aide de Git <small> (http://git-scm.com/book/fr/v2/ )</small></a>
+            </section>
         </section>
         <section>
             <section>
@@ -164,7 +172,7 @@
                 </p>
             </section>
             <section>
-                <h2>Les Remotes</h2>
+                <h2>Push</h2>
                 <br/>
                 <p>
                     Publier ses modifications :
@@ -175,7 +183,7 @@
                 </p>
             </section>
             <section>
-                <h2>Les Remotes</h2>
+                <h2>Pull</h2>
                 <br/>
                 <p>
                     Récupérer les modifications de ses collègues adorés:
@@ -184,6 +192,133 @@
                         git pull [&lt;nom remote&gt;] [&lt;branche distante&gt;]
                     </code>
                 </p>
+            </section>
+            <section>
+                <h2>Hooks</h2>
+                <blockquote>
+                    Un hook (littéralement « crochet » ou « hameçon ») permet à l'utilisateur d'un logiciel de personnaliser le fonctionnement de ce dernier, en lui faisant réaliser des actions supplémentaires à des moments déterminés.
+                    <br/> &ndash; Wikipedia
+                </blockquote>
+            </section>
+            <section>
+                <h2>Hooks</h2>
+                <p>Un hook c'est un endroit dans le processus Git où vous pouvez exécuter votre propre code.</p>
+            </section>
+            <section>
+                <h2>Hooks</h2>
+                <p>
+                    Deux sortes de hooks git : <br/>
+                    Les Hooks Locaux & Les Hooks Distants
+                </p>
+                <ul>
+                    <li>
+                        Hooks Locaux
+                        <ul>
+                            <li>
+                                pre-commit
+                                <br/>
+                                <small>
+                                    <i>Executé avant le commit</i>
+                                </small>
+                            </li>
+                            <li>
+                                post-commit
+                                <br/>
+                                <small>
+                                    <i>Executé après le commit</i>
+                                </small>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Hooks Distants
+                        <ul>
+                            <li>
+                                pre-receive
+                                <br/>
+                                <small>
+                                    <i>Exécuté sur le serveur distant avant la reception d'un push</i>
+                                </small>
+                            </li>
+                            <li>
+                                update
+                                <br/>
+                                <small>
+                                    <i>Comme pre-receive mais lancé une fois pour chaque branche poussée</i>
+                                </small>
+                            </li>
+                            <li>
+                                post-receive
+                                <br/>
+                                <small>
+                                    <i>Exécuté sur le serveur distant après la reception d'un push</i>
+                                </small>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Hooks</h2>
+                <p>RTFM</p>
+                <p>Plus d'infos sur <a href="http://githooks.com/">githooks.com</a></p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Github</h1>
+            </section>
+            <section>
+                <h2>Les Forks</h2>
+                <img src="images/fork.jpg" height="400" alt=""/>
+            </section>
+            <section>
+                <h2>Les Forks</h2>
+                <p>Copie d'un dépot</p>
+                <img src="images/forkbutton.png" alt=""/>
+            </section>
+            <section>
+                <h2>Les forks</h2>
+                <img src="images/myfork.png" alt=""/>
+            </section>
+            <section>
+                <h2>Les forks</h2>
+                <p>2 remotes:</p>
+                <ul>
+                    <li>origin : Mon fork</li>
+                    <li>upstream : Le dépot de base</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Les forks</h2>
+                <p>Synchroniser</p>
+                <code>git fetch upstream</code>
+                <br/><small><i>Récupère les modifications du dépot de base, mais ne les applique pas</i></small>
+                <br/><code>git checkout master</code>
+                <br/><small><i>On s'assure de se mettre sur la branche master</i></small>
+                <br/><code>git merge upstream/master</code>
+                <br/><small><i>On fusionne les modifs avec les notres</i></small>
+            </section>
+            <section>
+                <h2>Les forks</h2>
+                <p>Intégrer son code</p>
+                <h2>Les Pull-Requests</h2>
+                <img src="images/CreatePR.png" alt=""/>
+            </section>
+            <section>
+                <h2>Les forks <small>(& Github)</small></h2>
+                <p>RTFM</p>
+                <p>Plus d'infos <a href="https://help.github.com/">help.github.com/</a></p>
+            </section>
+        </section>
+        <section>
+            <section data-background="images/branches.jpg">
+                <h1>Les branches</h1>
+            </section>
+            <section>
+                <h2>Les branches</h2>
+                <p>Bifurcation</p>
+                <img src="images/git-branch1.png" alt=""/>
             </section>
         </section>
     </div>
