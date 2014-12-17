@@ -292,12 +292,14 @@
             <section>
                 <h2>Les forks</h2>
                 <p>Synchroniser</p>
-                <code>git fetch upstream</code>
-                <br/><small><i>Récupère les modifications du dépot de base, mais ne les applique pas</i></small>
-                <br/><code>git checkout master</code>
-                <br/><small><i>On s'assure de se mettre sur la branche master</i></small>
-                <br/><code>git merge upstream/master</code>
-                <br/><small><i>On fusionne les modifs avec les notres</i></small>
+
+                <span class="fragment"><code>git fetch upstream</code>
+                                <br/><small><i>Récupère les modifications du dépot de base, mais ne les applique pas</i>
+                    </small></span>
+                <span class="fragment"><br/><code>git checkout master</code>
+                                <br/><small><i>On s'assure de se mettre sur la branche master</i></small></span>
+                <span class="fragment"><br/><code>git merge upstream/master</code>
+                                <br/><small><i>On fusionne les modifs avec les notres</i></small></span>
             </section>
             <section>
                 <h2>Les forks</h2>
@@ -317,8 +319,49 @@
             </section>
             <section>
                 <h2>Les branches</h2>
-                <p>Bifurcation</p>
+                <p>/!\ Attention travaux! Déviation de code /!\</p>
                 <img src="images/git-branch1.png" alt=""/>
+            </section>
+            <section>
+                <h2>Les branches</h2>
+
+                <div class="fragment">
+                    <p>Créer une branche</p>
+                    <code>git branch &lt;branch name&gt;</code>
+                    <br/><br/>
+                </div>
+
+                <div class="fragment">
+                    <p>Créer une branche et switcher direct dessus</p>
+                    <code>git checkout -b &lt;branch name&gt;</code>
+                    <br/><br/>
+                </div>
+
+                <div class="fragment">
+                    <p>Lister les branches existantes</p>
+                    <code>git branch</code>
+                </div>
+            </section>
+            <section>
+                <h2>Les branches</h2>
+                <i>Comment switcher de branche avec du code en suspend ?</i>
+                <div class="fragment">
+                    <br/><br/><br/>
+                    <h3>Le stash</h3>
+                    <code>git stash save</code>
+                    <br/>
+                    <small><i>Stocke vos modifs à part et remet la branche actuelle au dernier commit</i></small>
+                </div>
+            </section>
+            <section>
+                <h2>Les branches</h2>
+                <div class="fragment">
+                    <br/><br/><br/>
+                    <h3>Le stash</h3>
+                    <code>git stash pop &lt;stash name&gt;</code>
+                    <br/>
+                    <small><i>Stocke vos modifs à part et remet la branche actuelle au dernier commit</i></small>
+                </div>
             </section>
         </section>
     </div>
