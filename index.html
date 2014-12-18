@@ -363,6 +363,64 @@
                     <small><i>Stocke vos modifs à part et remet la branche actuelle au dernier commit</i></small>
                 </div>
             </section>
+            <section>
+                <h2>Les branches</h2>
+                <div class="fragment">
+                    <h3>Merge</h3>
+                    <code>git merge &lt;branch name&gt;</code>
+                </div>
+            </section>
+            <section>
+                <h2>Merge</h2>
+                <img src="images/merging.png" alt=""/>
+            </section>
+            <section>
+                <h2>Merge</h2>
+                <img src="images/merging-ff.png" alt=""/>
+            </section>
+            <section>
+                <h2>Rebase</h2>
+                <img src="images/rebase.png" alt=""/>
+            </section>
+            <section>
+                <h2>Merge VS Rebase</h2>
+                <p class="fragment">
+                    Résultat identique, but différent.
+                </p>
+                <h3 class="fragment">Merge</h3>
+                <ul>
+                    <li class="fragment">
+                        Branche publique (utilisée par l'équipe)
+                    </li>
+                    <li class="fragment">
+                        Si la branche représente un Sprint Agile ou une fonctionnalité qui pourra évoluer par la suite
+                    </li>
+                    <li class="fragment">
+                        Il faut que l'historique de cette branche reste distinct et visible.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Rebase</h3>
+                <ul>
+                    <li class="fragment">
+                        Branche locale, pas partagée
+                    </li>
+                    <li class="fragment">
+                        Pas besoin de garder l'historique
+                    </li>
+                    <li class="fragment">
+                        Eviter des commits inutiles, ou un historique de branche du style
+                        <br/>
+                        <img src="images/histo_merdique.png" alt=""/>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h1>Merci</h1>
+            <img src="images/merci.gif" alt=""/>
+            <p>Des questions ?</p>
         </section>
     </div>
 
